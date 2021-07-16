@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse;
+    border-radius: 20rem;
+}
+
+tr>th {
+    padding: 1rem;
+}
+
+.form {
+    display: "flex";
+    width: "90vw";
+    justify-content: "center";
+
+}

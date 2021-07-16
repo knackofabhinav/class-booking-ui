@@ -1,0 +1,16 @@
+tr>td {
+    padding: 0.5em;
+    text-align: center;
+    border: 1px solid #172567;
+
+}
+
+.primary-btn {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background-color: #e66f36;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer
+}
