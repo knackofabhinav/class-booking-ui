@@ -16,7 +16,7 @@ export const Table = () => {
               <th>Subject</th>
               <th>Date</th>
               <th>Time</th>
-              <th colspan="2">Availability</th>
+              <th colSpan="2">Availability</th>
             </tr>
           </thead>
           <tbody>
