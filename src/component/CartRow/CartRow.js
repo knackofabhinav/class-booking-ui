@@ -1,7 +1,7 @@
 import { useAppReducer } from "../../contexts/data/data-context";
 
 export const CartRow = ({ details }) => {
-  const { state, dispatch } = useAppReducer();
+  const { dispatch } = useAppReducer();
   return (
     <tr key={details.id}>
       <td>{details.subject}</td>
