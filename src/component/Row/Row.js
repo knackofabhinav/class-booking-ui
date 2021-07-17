@@ -11,7 +11,7 @@ export const Row = ({ details }) => {
     if (state.cart.length < 3) {
       dispatch({ type: "ADD_TO_CART", payload: id });
     } else {
-      toast.warning("You Have Reached The Maximum Limit (3 Items)", {
+      toast.warning("You can only book maximum 3 classes per week", {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -26,19 +26,19 @@ export const Row = ({ details }) => {
   const CartButton = () => {
     if (details.seatsLeft === 0) {
       return (
-        <button disabled style={{ color: "#e66f36" }}>
+        <button className="btn" disabled style={{ color: "#e66f36" }}>
           Seats Full
         </button>
       );
     } else if (!!presentInCart()) {
       return (
-        <button disabled style={{ color: "#e66f36" }}>
+        <button className="btn" disabled style={{ color: "#e66f36" }}>
           Booked
         </button>
       );
     }
     return (
-      <button className="primary-btn" onClick={() => addToCart(details.id)}>
+      <button className="btn primary-btn" onClick={() => addToCart(details.id)}>
         Book Now
       </button>
     );

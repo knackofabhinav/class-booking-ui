@@ -5,14 +5,18 @@ tr>td {
 
 }
 
-
-
-.primary-btn {
+.btn {
     padding: 0.5rem 1rem;
     font-weight: bold;
-    background-color: #e66f36;
-    color: white;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer
+}
+
+
+.primary-btn {
+
+    background-color: #e66f36;
+    color: white;
+
 }

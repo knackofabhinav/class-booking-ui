@@ -10,12 +10,12 @@ export const CartRow = ({ details }) => {
       <td>{details.seatsLeft} Seats Left</td>
       <td>
         <button
-          className="primary-btn"
+          className="btn primary-btn"
           onClick={() => {
             dispatch({ type: "REMOVE_FROM_CART", payload: details });
           }}
         >
-          Remove
+          Cancel
         </button>
       </td>
     </tr>
