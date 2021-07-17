@@ -18,8 +18,20 @@ const appReducer = (state, action) => {
         ...state,
         cart: [
           ...state.cart,
-          state.classDetails.filter((item) => item.id === action.payload.id),
+          state.classDetails.find((item) => item.id === action.payload),
         ],
+        classDetails: state.classDetails.map((item) =>
+          item.id === action.payload
+            ? { ...item, seatsLeft: item.seatsLeft - 1 }
+            : item
+        ),
+        seatsLeft: state.seatsLeft - 1,
+      };
+    }
+    case "REMOVE_FROM_CART": {
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload.id),
       };
     }
     default:
