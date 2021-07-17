@@ -21,7 +21,9 @@ export const Table = () => {
           </thead>
           <tbody>
             {classDetails.length !== 0 &&
-              classDetails.map((details) => <Row details={details} />)}
+              classDetails.map((details) => (
+                <Row key={details.id} details={details} />
+              ))}
           </tbody>
         </table>
       </form>
