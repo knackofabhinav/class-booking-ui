@@ -11,9 +11,10 @@ export const Table = () => {
       style={{
         display: "flex",
         justifyContent: "center",
+        width: "100vw",
       }}
     >
-      <table style={{ width: "100%" }}>
+      <table style={{ width: "90%" }}>
         <thead style={{ color: "white", backgroundColor: "#172567" }}>
           <tr>
             <th>Subject</th>
