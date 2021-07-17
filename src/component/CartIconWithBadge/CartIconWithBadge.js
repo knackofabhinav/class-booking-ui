@@ -1,5 +1,5 @@
 import shoppingCart from "../../assets/icons/shopping-cart.png";
-import { useAppReducer } from "../../contexts/cart/cart-context";
+import { useAppReducer } from "../../contexts/data/data-context";
 
 export const CartIconWithBadge = () => {
   const {

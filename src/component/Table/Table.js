@@ -1,11 +1,12 @@
 import "./Table.css";
-import { useAppReducer } from "../../contexts/cart/cart-context";
+import { useAppReducer } from "../../contexts/data/data-context";
 import { Row } from "../Row/Row";
 export const Table = () => {
   const {
     state: { classDetails },
     dispatch,
   } = useAppReducer();
+  console.log("hi");
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <form className="form">

@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Table } from "./component/Table/Table";
 import "./App.css";
 import { CartIconWithBadge } from "./component/CartIconWithBadge/CartIconWithBadge";
 import { getDataFromServer } from "./services/api";
-import { useAppReducer } from "./contexts/cart/cart-context";
+import { useAppReducer } from "./contexts/data/data-context";
+import { Countdown } from "./component/Countdown/Countdown";
 
 function App() {
-  const [timeLeft, setTimeLeft] = useState(
-    Math.floor(Math.random() * (60 - 30 + 1)) + 30
-  );
   const {
     state: { seatsLeft },
     dispatch,
@@ -19,17 +17,7 @@ function App() {
       const response = await getDataFromServer();
       dispatch({ type: "INITIAL_DATA_FROM_SERVER", payload: response.data });
     })();
-  }, [dispatch]);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(
-      () => setTimeLeft((timeLeft) => timeLeft - 1),
-      1000
-    );
-    if (timeLeft === 0) {
-      clearTimeout(timeoutId);
-    }
-  }, [timeLeft]);
+  }, []);
 
   return (
     <div>
@@ -41,7 +29,7 @@ function App() {
         }}
       >
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <h5 style={{ margin: 0 }}>Time Left: {timeLeft} seconds</h5>
+          <Countdown />
           <h1 style={{ margin: 0, color: "#e66f36" }}>
             Claim your free Trial Class
           </h1>
