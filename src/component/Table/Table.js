@@ -24,10 +24,13 @@ export const Table = () => {
           </tr>
         </thead>
         <tbody>
-          {classDetails.length !== 0 &&
+          {classDetails.length !== 0 ? (
             classDetails.map((details) => (
               <Row key={details.id} details={details} />
-            ))}
+            ))
+          ) : (
+            <h1>Loading...</h1>
+          )}
         </tbody>
       </table>
     </div>
