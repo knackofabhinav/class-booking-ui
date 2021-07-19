@@ -1,6 +1,8 @@
 import { Countdown } from "../../component/Countdown/Countdown";
 import { CartIconWithBadge } from "../../component/CartIconWithBadge/CartIconWithBadge";
 import { useAppReducer } from "../../contexts/data/data-context";
+import { ToastContainer } from "react-toastify";
+
 import { Table } from "../../component/Table/Table";
 import { Link } from "react-router-dom";
 
@@ -43,6 +45,7 @@ export const Homepage = () => {
         </h2>
       </div>
       <Table />
+      <ToastContainer />
     </div>
   );
 };

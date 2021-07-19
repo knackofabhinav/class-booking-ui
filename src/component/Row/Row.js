@@ -1,6 +1,6 @@
 import "./Row.css";
 import { useAppReducer } from "../../contexts/data/data-context";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export const Row = ({ details }) => {
   const { state, dispatch } = useAppReducer();
@@ -53,7 +53,6 @@ export const Row = ({ details }) => {
       <td>
         <CartButton />
       </td>
-      <ToastContainer />
     </tr>
   );
 };
